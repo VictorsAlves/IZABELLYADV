@@ -1,0 +1,125 @@
+
+        body {
+            font-family: sans-serif; /* Substitua pela sua fonte preferida */
+        }
+        #topo {
+            background-image: url('/assets/images/bg.png');
+            background-size: cover; /* Faz com que a imagem de fundo cubra toda a área */
+            background-position: center; /* Centraliza a imagem de fundo */
+            padding: 10px 0; /* Ajuste o padding para reduzir a altura do topo */
+        }
+
+        #topo .logo-container {
+            display: flex; /* Flexbox para alinhar a imagem */
+            justify-content: flex-start; /* Alinha o logo à esquerda */
+            align-items: center; /* Alinha verticalmente */
+            height: auto; /* Deixa a altura automática para manter a proporção */
+            max-height: 100px; /* Limita a altura máxima do logo */
+        }
+
+        #topo .logo-container img {
+            width: 300px; /* Define a largura do logo para 300px */
+            height: auto; /* Mantém a proporção do logo */
+            object-fit: contain; /* Mantém a proporção original do logo */
+        }
+
+        #topo .text-center h4 {
+            color: white; /* Altera a cor do texto para branco */
+        }
+
+        #topo .btn-whatsapp {
+            background-color: #128C7E; /* Cor do botão verde do WhatsApp */
+            color: white; /* Cor do texto do botão */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 8px 15px; /* Ajuste de padding para o botão */
+            text-decoration: none; /* Remove o sublinhado do link */
+        }
+
+        #topo .btn-whatsapp:hover {
+            background-color: #0a4741; /* Cor do botão ao passar o mouse */
+        }
+
+       #header {
+        background-color: #ffffff; /* Cor de fundo do cabeçalho */
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
+      }
+        #header .navbar-brand {
+            display: flex; /* Flexbox para o logo */
+            align-items: center; /* Alinha verticalmente */
+            justify-content: flex-start; /* Alinha o logo à esquerda */
+            height: 100%; /* Garante que o logo ocupe toda a altura disponível */
+        }
+
+        #header .navbar-brand img {
+            max-width: 100%; /* Garante que a largura do logo seja proporcional */
+            height: auto; /* Mantém a proporção do logo */
+            max-height: 250px; /* Limita a altura máxima do logo */
+            object-fit: contain; /* Garante que o logo não seja distorcido */
+        }
+
+      /* Estilo para o ícone de seta para cima */
+.fa-arrow-up {
+  display: inline-block; /* Torna o ícone um elemento de bloco inline */
+  padding: 10px; /* Adiciona preenchimento ao redor do ícone */
+  border-radius: 50%; /* Torna o fundo circular */
+  background-color: #333; /* Cor de fundo do ícone */
+  color: white; /* Cor do ícone */
+  font-size: 20px; /* Tamanho do ícone */
+}
+
+       /* Estilos para os flip-boxes */
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 200px; /* Defina uma altura fixa para os flip-boxes */
+  perspective: 1000px; /* Cria o efeito 3D */
+  margin-bottom: 20px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flip-box-front img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.flip-box-back {
+  background-color: #f0f0f0;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Alinha o conteúdo verticalmente */
+  padding: 20px; /* Adiciona padding interno */
+}
+.flip-box-back .flip-box-title {
+    margin-bottom: 10px;
+}
