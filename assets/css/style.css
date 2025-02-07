@@ -123,3 +123,25 @@
 .flip-box-back .flip-box-title {
     margin-bottom: 10px;
 }
+
+
+@media (max-width: 768px) {
+.navbar-toggler {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+
+#header .navbar-brand img {
+    max-width: 100%;
+    height: auto;
+    max-height: 130px;
+    object-fit: contain;
+    display: block; /* Faz a imagem se comportar como um bloco */
+    margin: 0 auto 0 0; /* Margem superior e inferior 0, direita automática, esquerda 0 */
+
+}
+}
+
