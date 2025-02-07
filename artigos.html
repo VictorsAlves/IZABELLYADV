@@ -130,5 +130,16 @@
     </div>
 </footer>
 
+<script>
+    // Adicione o evento de clique ao link "voltar ao topo"
+    document.querySelector('.fa-arrow-up').addEventListener('click', function(event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Adiciona uma rolagem suave
+        });
+    });
+</script>
+
 </body>
 </html>
