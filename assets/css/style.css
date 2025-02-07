@@ -166,6 +166,10 @@
 
 
 @media (max-width: 768px) {
+#navbarNav ul {
+  margin-left: 20px; /* Ajuste o valor conforme necessário */
+}
+
 .navbar-toggler {
   position: fixed;
   top: 20px;
