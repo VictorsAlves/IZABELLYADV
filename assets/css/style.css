@@ -61,6 +61,7 @@
             object-fit: contain; /* Garante que o logo não seja distorcido */
         }
 
+
       /* Estilo para o ícone de seta para cima */
 .fa-arrow-up {
   display: inline-block; /* Torna o ícone um elemento de bloco inline */
@@ -124,6 +125,44 @@
 .flip-box-back .flip-box-title {
     margin-bottom: 10px;
 }
+
+.hero-section {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Cor do texto na seção */
+}
+
+.hero-image {
+  position: absolute; /* Posiciona a imagem para cobrir a seção */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/images/banner.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* coloca a imagem atrás do conteúdo de texto */
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Ajuste a opacidade conforme necessário */
+}
+
+
+.hero-section .container {
+    z-index: 1; position: relative;  /* Garante que o texto fique acima da imagem */
+}
+
+
 
 
 @media (max-width: 768px) {
