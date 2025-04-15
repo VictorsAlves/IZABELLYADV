@@ -1,0 +1,30 @@
+# Ignora a pasta do IntelliJ IDEA
+.idea/
+
+# Ignora arquivos temporários e de sistema
+*.log
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Ignora arquivos de sistema do macOS e Windows
+ehthumbs.db
+desktop.ini
+
+# Ignora backups de editores
+*~
+*.bak
+*.orig
+
+# Ignora pasta node_modules (caso use algum pacote JS no futuro)
+node_modules/
+
+# Ignora arquivos de build (caso use no futuro)
+dist/
+build/
+
+# Ignora arquivos zip ou comprimidos
+*.zip
+*.tar.gz
