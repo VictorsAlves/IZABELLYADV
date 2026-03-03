@@ -3,7 +3,7 @@
             font-family: sans-serif; /* Substitua pela sua fonte preferida */
         }
         #topo {
-            background-image: url('/assets/images/bg.png');
+          background-image: url('../images/bg.png');
             background-size: cover; /* Faz com que a imagem de fundo cubra toda a área */
             background-position: center; /* Centraliza a imagem de fundo */
             padding: 90px /* Ajuste o padding para reduzir a altura do topo */
@@ -18,7 +18,8 @@
         }
 
         #topo .logo-container img {
-            width: 400px; /* Define a largura do logo para 300px */
+          width: 100%; /* Mantém o logo responsivo dentro da coluna */
+          max-width: 400px;
             height: auto; /* Mantém a proporção do logo */
             object-fit: contain; /* Mantém a proporção original do logo */
             justify-content: flex-start; /* Alinha à esquerda */
@@ -41,23 +42,34 @@
         }
 
        #header {
-        background-color: #ffffff; /* Cor de fundo do cabeçalho */
+        background-color: #f8f9fa; /* Cor de fundo do cabeçalho */
         padding: 20px 0;
         position: sticky;
         top: 0;
         z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
       }
+        #header .navbar {
+          padding: 0.5rem 0;
+          background-color: transparent;
+        }
+        #header .navbar .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
         #header .navbar-brand {
             display: flex; /* Flexbox para o logo */
             align-items: center; /* Alinha verticalmente */
             justify-content: flex-start; /* Alinha o logo à esquerda */
             height: 100%; /* Garante que o logo ocupe toda a altura disponível */
+          margin-right: 0;
+          padding: 0;
         }
 
         #header .navbar-brand img {
             max-width: 100%; /* Garante que a largura do logo seja proporcional */
             height: auto; /* Mantém a proporção do logo */
-            max-height: 250px; /* Limita a altura máxima do logo */
+          max-height: 64px; /* Limita a altura máxima do logo */
             object-fit: contain; /* Garante que o logo não seja distorcido */
         }
 
@@ -170,44 +182,89 @@
   margin-left: 20px; /* Ajuste o valor conforme necessário */
 }
 
+#header {
+  padding: 8px 0;
+}
+
+#header .navbar {
+  padding: 0.35rem 0;
+}
+
+#header .navbar-brand img {
+  max-height: 48px;
+  width: auto;
+}
+
 .navbar-toggler {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
+  position: static;
+  margin-left: auto;
 }
-
-
-    height: auto;
-    max-height: 130px;
-    object-fit: contain;
-    display: block; /* Faz a imagem se comportar como um bloco */
-    margin: 0 auto 0 0; /* Margem superior e inferior 0, direita automática, esquerda 0 */
-
-}
-
-/* Estilos para telas maiores ou iguais a 1120px */
-@media (min-width: 1120px) {
-  .navbar .navbar-collapse {
-    justify-content: space-between;
-  }
 
 #navbarNav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f8f9fa; /* Cor de fundo do menu (opcional) */
-  z-index: 1000; /* Garante que o menu fique acima de tudo */
-  padding: 10px; /* Adiciona padding (opcional) */
+  background-color: #f8f9fa;
 }
 
 #navbarNav .navbar-nav {
-  width: 100%;
+  padding: 8px 0;
+}
+
+#navbarNav .nav-link {
+  padding: 8px 16px;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  #topo {
+    padding: 56px 0;
+  }
+
+  #topo .logo-container img {
+    max-width: 250px;
+  }
+
+  #topo .text-center h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    line-height: 1.25;
+  }
+
+  #topo .btn-whatsapp {
+    padding: 6px 10px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Estilos para telas maiores ou iguais a 992px */
+@media (min-width: 992px) {
+  #header .navbar {
+    align-items: center;
+  }
+
+  .navbar .navbar-collapse {
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+#navbarNav {
+  position: static;
+  background-color: transparent;
+  padding: 0;
+  width: auto;
+}
+
+#navbarNav .navbar-nav {
+  width: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 20px;
+}
+
+#navbarNav .nav-link {
+  white-space: nowrap;
+  padding: 0.5rem 0;
 }
 }
 
